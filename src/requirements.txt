@@ -1,3 +1,5 @@
-Flask==2.1.2
-Flask-HTTPAuth==4.7.0
-
+flask
+datetime
+sqlite3
+hashlib
+flask_httpauth

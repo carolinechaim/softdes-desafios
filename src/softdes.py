@@ -9,12 +9,10 @@ import numbers
 from datetime import datetime
 import sqlite3
 import hashlib
-from flask_httpauth import HTTPBasicAuth
+import flask_httpauth 
 from flask import Flask, request, render_template
 
-
 DBNAME = './quiz.db'
-
 
 def lambda_handler(event, context):
     try:
@@ -125,7 +123,7 @@ def get_info(user):
         return info[0]
 
 
-auth = HTTPBasicAuth()
+auth = flask_httpauth.HTTPBasicAuth() 
 
 app = Flask(__name__, static_url_path='')
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?TX'
